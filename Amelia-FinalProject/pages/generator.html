@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display:400,400i,700&amp;subset=latin-ext" rel="stylesheet">
+	<link href="../css/main.css" rel="stylesheet" type="text/css">
+	<title>Nail Files | Generator</title>
+</head>
+<body onload="generate()">
+	<div class="blurmask">
+	</div>
+	<header>
+		<h1><a href="home.html">Nail Files</a></h1>
+		<nav>
+			<a href="home.html">Home</a>
+				<span class="dropdown"><a href="allbrands.html">Brands</a>
+				<div id="droplist">
+					<a href="a-england.html">A England</a>
+					<a href="cadillacquer.html">Cadillacquer</a>
+					<a href="cirque-colors.html">Cirque Colors</a>
+					<a href="ilnp.html">I Love Nail Polish</a>
+					<a href="kbshimmer.html">KBShimmer</a>
+				</div>
+			</span>
+			<a href="contact.html">Contact Us</a>
+			<a href="generator.html" class="rnpg active">????</a>
+			<a href="cart.html" class="cart" id="shopcart"></a>
+		</nav>
+	</header>
+
+	<section id="generator">
+		<h3>Can't decide on a nail polish?</h3>
+		<p>Why not try... <span id="random"></span></p>
+		<button type="button" class="no" onclick="generate()">No? Get another suggestion.</button>
+	</section>
+
+<script src="../js/main.js" type="text/javascript"></script>
+</body>
+</html>

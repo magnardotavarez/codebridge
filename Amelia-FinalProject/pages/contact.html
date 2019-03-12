@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display:400,400i,700&amp;subset=latin-ext" rel="stylesheet">
+	<link href="../css/main.css" rel="stylesheet" type="text/css">
+	<title>Nail Files | Contact</title>
+</head>
+<body>
+	<div class="blurmask">
+	</div>
+	<header>
+		<h1><a href="home.html">Nail Files</a></h1>
+		<nav>
+			<a href="home.html">Home</a>
+				<span class="dropdown"><a href="allbrands.html">Brands</a>
+				<div id="droplist">
+					<a href="a-england.html">A England</a>
+					<a href="cadillacquer.html">Cadillacquer</a>
+					<a href="cirque-colors.html">Cirque Colors</a>
+					<a href="ilnp.html">I Love Nail Polish</a>
+					<a href="kbshimmer.html">KBShimmer</a>
+				</div>
+			</span>
+			<a href="contact.html" class="active">Contact Us</a>
+			<a href="generator.html" class="rnpg">????</a>
+			<a href="cart.html" class="cart" id="shopcart"></a>
+		</nav>
+	</header>
+
+	<section class="contact-us">
+		<form id="contact">
+			<div class="nameinput">
+				<label for="name">Your name:</label>
+				<input name="name" id="name" type="text" size="50" placeholder="Your Name">
+			</div>
+			<div class="emailinput">
+				<label for="email">E-mail address:</label>
+				<input name="email" id="email" type="text" size="50" placeholder="example@domain.com">
+			</div>
+			<div class="messageinput">
+				<label for="message">Your message:</label>
+				<textarea rows="6" cols="50" form="contact" placeholder="Enter message here..."></textarea>
+			</div>
+			<!-- I wish this could be type="submit" but then the modal doesn't show. -->
+			<button type="button" id="send" onclick="submitMessage()">Send</button>
+		</form>
+	<!--- ######## MODAL ######## -->
+		<div id="modalwindow">
+			<p id="modalmessage"></p>
+			<button type="button" id="closebutton" onclick="closeModal()">OK</button>
+		</div>
+	</section>
+
+<script src="../js/main.js" type="text/javascript"></script>
+</body>
+</html>

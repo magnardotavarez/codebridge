@@ -1,0 +1,688 @@
+body {
+	margin: 0;
+	background-image: linear-gradient(#7698C7, #9AB3D6, white, white, white);
+	background-attachment: fixed;
+	height: 100%;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.blurmask {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	background-color: rgba(154, 179, 214, 0.4);
+	background-attachment: fixed;
+	filter: blur(5px);
+	margin: 0;
+	z-index: -1;
+}
+
+/* ############# LANDING PAGE ANIMATION ############ */
+
+.parent a {
+	font-size: 70pt;
+	display: block;
+	text-align: center;
+	text-shadow: 2px 2px 10px #494a4c;
+	text-decoration: none;
+	color: white;
+	margin-top: 20%;
+}
+
+.bar {
+	width: 100vw;
+	height: 10%;
+	background-color: rgba(178, 197, 224, 1);
+	position: absolute;
+	box-shadow: 0 -5px 5px #494a4c;
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+#bar1 {
+	top: 0;
+	right: 0;
+	z-index: 10;
+}
+
+#bar2 {
+  top: 10%;
+  left: 0;
+  z-index: 9;
+}
+
+#bar3 {
+	top: 20%;
+	right: 0;
+	z-index: 8;
+}
+
+#bar4 {
+	top: 30%;
+	left: 0;
+	z-index: 7;
+}
+
+#bar5 {
+	top: 40%;
+	right: 0;
+	z-index: 6;
+}
+
+#bar6 {
+	top: 50%;
+	left: 0;
+	z-index: 5;
+}
+
+#bar7 {
+	top: 60%;
+	right: 0;
+	z-index: 4;
+}
+
+#bar8 {
+	top: 70%;
+	left: 0;
+	z-index: 3;
+}
+
+#bar9 {
+	top: 80%;
+	right: 0;
+	z-index: 2;
+}
+
+#bar10 {
+	top: 90%;
+	left: 0;
+	z-index: 1;
+}
+
+/* ################# REGULAR PAGES ################## */
+header {
+	display: grid;
+	width: 100%;
+	grid-template-columns: 1fr 4fr;
+	grid-template-areas:
+		"heading nav"
+}
+
+h1 {
+	text-align: left;
+	padding-left: 20px;
+	margin: 5px;
+	font-family: 'Playfair Display', serif;
+	font-weight: 400;
+	font-style: italic;
+	font-size: 40pt;
+	display: inline-block;
+	grid-area: heading;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1 a {
+	color: white;
+	letter-spacing: 0.05em;
+}
+
+nav {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	grid-area: nav;
+}
+
+nav a, nav span {
+	padding: 0;
+	margin: 20px 24px;
+	line-height: 20pt;
+	border: 2px solid #d6e0ef;
+	flex: 1;
+	font-size: 10pt;
+	letter-spacing: 0.1em;
+	color: #d6e0ef;
+	text-align: center;
+}
+
+nav span > a {
+	border: none;
+}
+
+nav a.cart, nav a.rnpg {
+	flex: 0.5;
+}
+
+nav a:hover, nav span:hover {
+	border: 2px solid white;
+	letter-spacing: 0.2em;
+	color: white;
+}
+
+nav span > a:hover {
+	border: none;
+}
+
+nav a.active {
+	color: white;
+}
+
+#droplist {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	position: absolute;
+	top: 56px;
+	left: 40.6%;
+	margin: 0;
+	padding: 0;
+	padding-bottom: 5px;
+	width: 16%;
+	background-color: #88a7d2;
+	box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+	height: 0;
+	visibility: hidden;
+	transition: 0.2s ease-in-out;
+}
+
+#droplist a {
+	margin: 5px;
+}
+
+#droplist a:hover {
+	border: 2px solid white;
+	letter-spacing: 0.2em;
+	color: white;
+}
+
+.dropdown:hover #droplist {
+	height: 200px;
+	visibility: visible;
+	transition: 0.2s ease-in-out;
+}
+
+/* ################# HOME PAGE ################## */
+
+.homepage {
+	width: 90%;
+	margin: 40px auto 50px;
+	color: white;
+}
+
+
+.homepage p {
+	width: 60%;
+	margin: 0 auto;
+	letter-spacing: 0.1em;
+	background-color: #7698C7;
+	padding: 15px 30px;
+	text-align: center;
+	font-size: 14pt;
+}
+
+.slideshow {
+	height: 350px;
+	width: 350px;
+	background-color: #7698C7;
+	margin: 40px auto;
+	display: grid;
+	align-items: center;
+}
+
+.homepage img {
+	display: block;
+	height: 300px;
+	max-width: 300px;
+	margin: auto;
+}
+
+/* ################# BRANDS ################# */
+
+.brandhead {
+	max-width: 20%;
+	margin: 40px auto 0;
+	padding: 10px;
+	text-align: center;
+	letter-spacing: 0.2em;
+	color: white;
+	background-color: #7698C7;
+}
+
+section.single { /* for single brand pages */
+	width: 95%;
+	margin: 20px auto 50px;
+	display: grid;
+	grid-template-rows: 1fr auto;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-gap: 10px;
+	justify-content: center;
+}
+
+section.all { /* to view all brands */
+	width: 95%;
+	margin: 40px auto 50px;
+	display: grid;
+	grid-template-rows: 1fr auto;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-gap: 10px;
+	justify-content: center;
+}
+
+.itemimage {
+	display: block;
+	height: 250px;
+	margin: 15px auto;
+}
+
+.item:hover .itemimage {
+	animation: grow 0.1s ease-in-out forwards;
+}
+
+
+@keyframes grow {
+	0%, 100% {
+		transform: scale(1.02);
+		box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+	}
+}
+
+.name { /* text */
+	font-size: 11pt;
+	letter-spacing: 0.1em;
+	background-color: #7698C7;
+	color: white;
+	width: 200px;
+	margin: 0 auto;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: center;
+}
+
+.name p {
+	margin: 5px;
+}
+
+.item:hover .name p {
+	letter-spacing: 0.2em;
+	color: white;
+}
+
+.itemname {
+	font-size: 10pt;
+}
+
+/* #################### PRODUCT PAGES #################### */
+
+.itempage {
+	width: 80%;
+	margin: 40px auto 50px;
+	display: grid;
+	grid-template-columns: 35% 2fr;
+	grid-template-rows: 1fr;
+	grid-template-areas:
+		"image details";
+	grid-gap: 20px;
+}
+
+#mainimg {
+	max-width: 400px;
+	min-width: 200px;
+	max-height: 400px;
+	min-height: 200px;
+	margin-bottom: 10px;
+}
+
+.images {
+	grid-area: image;
+	align-items: center;
+}
+
+.alternate {
+	max-height: 80px;
+	max-width: 80px;
+	opacity: 0.7;
+}
+
+.alternate:hover {
+	opacity: 1;
+}
+
+.itemdetails {
+	grid-area: details;
+}
+
+.itemdetails h2 {
+	font-size: 16pt;
+	color: white;
+	letter-spacing: 0.2em;
+	background-color: #7698C7;
+	padding: 15px;
+	padding-left: 30px;
+	margin: 0 auto 5px;
+}
+
+.itemdetails h3 {
+	background-color: #7698C7;
+	padding: 15px;
+	padding-left: 30px;
+	margin: 5px auto;
+	font-size: 13pt;
+	color: white;
+	letter-spacing: 0.1em;
+	font-weight: normal;
+}
+
+.itemdetails p {
+	font-size: 10pt;
+	color: white;
+	background-color: #7698C7;
+	padding: 15px;
+	padding-left: 30px;
+	margin: 5px auto;
+}
+
+p#price {
+	display: inline-block;
+	padding: 15px;
+	margin-right: 10px;
+}
+
+.add {
+	background-color: #4673af;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 9pt;
+	color: white;
+	text-align: center;
+	letter-spacing: 0.1em;
+	height: 30px;
+	width: 105px;
+	padding: 5px;
+	margin-top: 10px;
+	border-radius: 5px;
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.add:active {
+	box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+/*
+#cartmodal {
+	display: none;
+	position: fixed;
+	top: 20%;
+	left: 40%;
+	background-color: #4673af;
+	color: white;
+	text-align: center;
+	padding: 35px 50px;
+	z-index: 5;
+	border-radius: 5px;
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+	animation: fade 1s linear both;
+}
+
+@keyframes fade {
+	0%, 20% {
+		opacity: 1;
+		display: block;
+	}
+	100% {
+		opacity: 0;
+		display: none;
+	}
+}*/
+/* I wanted to figure this out, but the modal wouldn't display again after the first time... 
+
+
+
+/* ################## CONTACT ################## */
+
+.contact-us {
+	width: 80%;
+	margin: 40px auto 50px;
+}
+
+form {
+	margin: 0 auto;
+	text-align: center;
+}
+
+form div {
+	text-align: center;
+	margin: 30px;
+}
+
+input {
+	display: block;
+	margin: 5px auto;
+	height: 30px;
+	font-size: 10pt;
+	padding-left: 5px;
+}
+
+label {
+	background-color: #7698C7;
+	color: white;
+	padding: 10px;
+	margin-bottom: 5px;
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+	letter-spacing: 0.1em;
+}
+
+.messageinput textarea {
+	display: block;
+	height: 200px;
+	margin: 5px auto;
+	font-size: 10pt;
+	padding: 5px;
+}
+
+#send {
+	color: white;
+	background-color: #4673af;
+	height: 30px;
+	text-align: center;
+	margin: 0 auto;
+	width: 100px;
+	font-size: 9pt;
+	border-radius: 5px;
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+	font-family: 'Montserrat', sans-serif;
+	letter-spacing: 0.1em;
+}
+
+#send:active {
+	box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+/* MODAL */
+#modalwindow {
+	display: none;
+	position: fixed;
+	top: 20%;
+	left: 35%;
+	height: 150px;
+	width: 400px;
+	background-color: #7698C7;
+	color: white;
+	text-align: center;
+	padding: 15px;
+	z-index: 5;
+	border: solid white;
+	border-radius: 5px;
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+#closebutton {
+	color: white;
+	background-color: #4673af;
+	height: 30px;
+	text-align: center;
+	margin-top: 30px;
+	width: 75px;
+	font-size: 9pt;
+	border-radius: 5px;
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+	font-family: 'Montserrat', sans-serif;
+	letter-spacing: 0.1em;
+}
+
+#closebutton:active {
+	box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+/* ################## GENERATOR ################# */
+
+#generator {
+	width: 50%;
+	margin: 40px auto 50px;
+	color: white;
+	letter-spacing: 0.1em;
+	background-color: #7698C7;
+	padding: 40px;
+}
+
+#generator h3 {
+	text-align: left;
+	margin-bottom: 30px;
+}
+
+#random {
+	font-style: italic;
+}
+
+.no {
+	color: white;
+	background-color: #4673af;
+	text-align: center;
+	display: block;
+	margin: 30px auto 0;
+	padding: 10px;
+	font-size: 9pt;
+	border-radius: 5px;
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+	font-family: 'Montserrat', sans-serif;
+	letter-spacing: 0.1em;
+}
+
+.no:active {
+	box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+/* ################## SHOPPING CART ################## */
+
+.shoppingcart {
+	width: 50%;
+	margin: 40px auto 50px;
+	color: white;
+}
+
+#cartcontents {
+	padding: 15px;
+}
+
+.cartitem {
+	background-color: #7698C7;
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr 2fr 1fr;
+	align-items: center;
+	justify-content: center;
+	list-style: none;
+}
+
+.cartimg {
+	max-width: 100px;
+	max-height: 100px;
+	margin: 20px 10px;
+	grid-column: 1/2;
+	grid-row: 1/2;
+}
+
+#cartcontents li {
+	margin: 0 10px;
+	padding: 5px;
+	list-style: none;
+}
+
+.itemdetails {
+	padding-left: 0;
+	grid-row: 1/2;
+	grid-column: 2/3;
+}
+
+.price {
+	grid-row: 1/2;
+	grid-column: 3/4;
+	text-align: right;
+	margin-right: 15px;
+}
+
+#cartcontents p {
+	background-color: #7698C7;
+	padding: 15px;
+	text-align: right;
+}
+
+.shoppingcart button {
+	display: block;
+	margin: 0 auto;
+	background-color: #4673af;
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	letter-spacing: 0.1em;
+	font-size: 11pt;
+	border-radius: 5px;
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+	text-align: center;
+	height: 35px;
+}
+
+.shoppingcart:active {
+	box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+#thanksmodal {
+	display: none;
+	position: fixed;
+	top: 25%;
+	left: 38.5%;
+	height: 100px;
+	width: 300px;
+	background-color: #7698C7;
+	color: white;
+	text-align: center;
+	padding: 15px;
+	z-index: 5;
+	border: solid white;
+	border-radius: 5px;
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+#closebutton2 {
+	color: white;
+	background-color: #4673af;
+	height: 30px;
+	text-align: center;
+	margin-top: 35px;
+	width: 50px;
+	font-size: 9pt;
+	border-radius: 5px;
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+	font-family: 'Montserrat', sans-serif;
+	letter-spacing: 0.1em;
+}
+
+#closebutton2:active {
+	box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
